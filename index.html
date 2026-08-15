@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      max-width: 48rem;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2.25rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin-top: 1.5rem; }
+    .updated { color: #666; font-size: 0.9rem; margin-top: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+    th { background: #f5f5f5; }
+    .none { color: #197a3d; font-weight: 600; }
+    .lang { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 2px solid #ddd; }
+    footer { margin-top: 3rem; color: #666; font-size: 0.9rem; }
+  </style>
+  <script>
+    // ?app=アプリ名 で見出しの表示名だけを差し替える。
+    // 収集内容そのものは下の表に静的に書いてあり、この処理には依存しない
+    // （JavaScript を実行しない閲覧者・審査ツールでも全文が読めるようにするため）。
+    // textContent で入れるので、?app= に何を渡されてもスクリプトにはならない。
+    window.addEventListener("DOMContentLoaded", () => {
+      const appName = new URLSearchParams(window.location.search).get("app");
+      if (!appName) return;
+      document.title = appName + " プライバシーポリシー";
+      document.querySelectorAll(".appName").forEach((el) => {
+        el.textContent = appName;
+      });
+    });
+  </script>
+</head>
+<body>
+
+<h1>プライバシーポリシー</h1>
+<p class="updated">最終更新日: 2026年8月15日</p>
+
+<p>
+  開発者 tiritara（以下「当方」）が公開する<span class="appName">アプリ</span>について、
+  取り扱う情報とその目的を以下のとおり定めます。
+  取り扱う情報はアプリによって異なるため、該当する項目をご確認ください。
+</p>
+
+<h2>1. 位置情報</h2>
+
+<p>位置情報を取得するアプリと、その取得のしかたは次のとおりです。ここに挙げていないアプリは位置情報を取得しません。</p>
+
+<table>
+  <thead>
+    <tr><th>アプリ</th><th>取得のしかた</th><th>目的</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TrainDetector</td>
+      <td>継続的に取得します。<strong>アプリを閉じている間や画面が消えている間も取得します。</strong></td>
+      <td>乗車中の路線の推定と、指定した範囲へ入ったことの検知（到着アラーム）</td>
+    </tr>
+    <tr>
+      <td>熊鈴・熊よけ（Bear Alert）</td>
+      <td>利用者が送信操作を行ったときにのみ取得し、送信します。</td>
+      <td>利用者自身による現在地の共有</td>
+    </tr>
+    <tr>
+      <td>RosaNauts<br>和風六曜暦カレンダー</td>
+      <td>天気予報の取得時に取得します。</td>
+      <td>現在地に対応する天気情報の表示</td>
+    </tr>
+    <tr>
+      <td>liferec</td>
+      <td>記録の作成時に取得します。</td>
+      <td>記録に現在地を残すため</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>TrainDetector における位置情報の保存と送信</h3>
+<ul>
+  <li>位置情報は<strong>お使いの端末内にのみ保存</strong>されます。当方のサーバーへ位置情報を送信することはありません。
+      当方のサーバーへ送るのは、運行情報を取得するための<strong>路線の識別子のみ</strong>です。</li>
+  <li>アラームはアプリを閉じていても画面が消えていても鳴る必要があるため、
+      アプリを使用していない間の位置情報が必要になります。この目的以外には利用しません。</li>
+  <li>設定で「詳細な走行ログを保存する」を有効にした場合、位置の記録が端末内に残ります。
+      これを外部へ渡すのは、利用者ご自身が書き出し操作を行い、共有先を選んだときだけです。
+      当方が自動的に受け取ることはありません。</li>
+  <li>アプリの削除により端末内の位置情報も削除されます。アプリ内の設定からも削除できます。</li>
+</ul>
+
+<h2>2. 広告</h2>
+
+<p>
+  次のアプリでは<strong>広告を表示しません</strong>。広告 ID の取得も行いません。
+</p>
+<p>和風六曜暦カレンダー / 熊鈴・熊よけ（Bear Alert） / 転経輪 / TrainDetector</p>
+
+<p>
+  上記以外のアプリでは広告を表示します。広告の配信のために広告 ID を利用し、
+  広告配信事業者が利用状況に関する情報を取得する場合があります。
+</p>
+
+<h2>3. 購入情報</h2>
+<p>
+  アプリ内購入は Google Play を通じて処理されます。当方がクレジットカード番号等の
+  決済情報を受け取ることはありません。当方が保持するのは購入済みかどうかの状態のみです。
+</p>
+
+<h2>4. 不具合対応のための情報</h2>
+<p>
+  不具合の調査のために、クラッシュ時の情報や利用状況の統計を取得する場合があります。
+  これらは個人を特定する目的では利用しません。
+</p>
+
+<h2>5. 第三者サービス</h2>
+<ul>
+  <li><strong>Google Play</strong> — アプリの配信と課金処理</li>
+  <li><strong>Google Play 開発者サービス</strong> — 位置情報の取得（位置情報を使うアプリのみ）</li>
+  <li><strong>Google Maps</strong> — 地図の表示（地図を表示するアプリのみ）</li>
+  <li><strong>広告配信事業者</strong> — 広告を表示するアプリのみ</li>
+  <li><strong>天気情報の提供元</strong> — 天気を表示するアプリでは、天気の取得のために地域の情報が送信されます</li>
+</ul>
+<p>
+  Google の各サービスにおける取り扱いは
+  <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>に従います。
+</p>
+
+<h2>6. 児童の安全</h2>
+<p>
+  児童の性的虐待および搾取（CSAE）に対する方針は<a href="child-safety.html">こちら</a>をご覧ください。
+</p>
+
+<h2>7. お問い合わせ</h2>
+<p>
+  ご不明点、および保存された情報の削除のご依頼は以下へご連絡ください。<br>
+  開発者メール: <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a>
+</p>
+
+<h2>8. 改定</h2>
+<p>本ポリシーは必要に応じて更新されます。変更がある場合は本ページの最終更新日を改めます。</p>
+
+<div class="lang">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 15 August 2026</p>
+
+  <p>
+    This policy covers the apps published by the developer tiritara. What is handled differs
+    per app; please refer to the relevant section.
+  </p>
+
+  <h2>1. Location</h2>
+  <p>Only the apps listed below use location. Any app not listed does not collect it.</p>
+  <table>
+    <thead>
+      <tr><th>App</th><th>How it is collected</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TrainDetector</td>
+        <td>Continuously, <strong>including while the app is closed or the screen is off</strong>.</td>
+        <td>Estimating the line you are riding, and detecting that you entered an alarm area</td>
+      </tr>
+      <tr>
+        <td>Bear Alert</td>
+        <td>Only when you choose to send it.</td>
+        <td>Sharing your own location</td>
+      </tr>
+      <tr>
+        <td>RosaNauts, Rokuyou Calendar</td>
+        <td>When weather is fetched.</td>
+        <td>Showing weather for your area</td>
+      </tr>
+      <tr>
+        <td>liferec</td>
+        <td>When a record is created.</td>
+        <td>Attaching your location to the record</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Location in TrainDetector</h3>
+  <p>
+    Location is <strong>stored on your device only</strong> and is never sent to our servers;
+    the only thing sent to our servers is the identifier of the railway line whose service
+    information is requested. Background access is required because the alarm must ring while
+    the app is closed and the screen is off. If you enable detailed ride logging, the recorded
+    positions stay on the device and leave it only when you explicitly export them and choose
+    where to send them. Uninstalling the app deletes this data, and it can also be deleted from
+    the app's settings.
+  </p>
+
+  <h2>2. Advertising</h2>
+  <p class="none">
+    Rokuyou Calendar, Bear Alert, Tenkeirin and TrainDetector show no ads and do not use an
+    advertising ID.
+  </p>
+  <p>Other apps show ads, which use an advertising ID and may collect usage information.</p>
+
+  <h2>3. Purchases</h2>
+  <p>
+    In-app purchases are processed by Google Play. We never receive your payment details; we
+    only keep whether a purchase was made.
+  </p>
+
+  <h2>4. Third parties</h2>
+  <p>
+    Google Play, Google Play services (location), Google Maps, advertising providers and weather
+    data providers may be used depending on the app. Google's handling of data follows the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+  </p>
+
+  <h2>5. Contact</h2>
+  <p>
+    Questions and deletion requests:
+    <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a>
+  </p>
+</div>
+
+<footer>
+  <p>© tiritara</p>
+</footer>
+
+</body>
+</html>
