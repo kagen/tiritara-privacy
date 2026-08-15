@@ -67,12 +67,12 @@
     </tr>
     <tr>
       <td>熊鈴・熊よけ（Bear Alert）</td>
-      <td>利用者が送信操作を行ったときにのみ取得し、送信します。</td>
-      <td>利用者自身による現在地の共有</td>
+      <td>利用者が送信操作を行ったときにのみ取得します。<strong>利用者ご自身が設定したメールアドレス宛に、メールで送信されます。</strong>当方がこれを受け取ることはありません。</td>
+      <td>利用者自身による現在地の通知</td>
     </tr>
     <tr>
       <td>RosaNauts<br>和風六曜暦カレンダー</td>
-      <td>天気予報の取得時に取得します。</td>
+      <td>天気予報の取得時に取得します。天気情報の提供元（Open-Meteo）へ送信されます。</td>
       <td>現在地に対応する天気情報の表示</td>
     </tr>
     <tr>
@@ -113,11 +113,8 @@
   決済情報を受け取ることはありません。当方が保持するのは購入済みかどうかの状態のみです。
 </p>
 
-<h2>4. 不具合対応のための情報</h2>
-<p>
-  不具合の調査のために、クラッシュ時の情報や利用状況の統計を取得する場合があります。
-  これらは個人を特定する目的では利用しません。
-</p>
+<h2>4. クラッシュログ・利用統計</h2>
+<p class="none">当方はクラッシュログを取得していません。</p>
 
 <h2>5. 第三者サービス</h2>
 <ul>
@@ -125,7 +122,8 @@
   <li><strong>Google Play 開発者サービス</strong> — 位置情報の取得（位置情報を使うアプリのみ）</li>
   <li><strong>Google Maps</strong> — 地図の表示（地図を表示するアプリのみ）</li>
   <li><strong>広告配信事業者</strong> — 広告を表示するアプリのみ</li>
-  <li><strong>天気情報の提供元</strong> — 天気を表示するアプリでは、天気の取得のために地域の情報が送信されます</li>
+  <li><strong>Open-Meteo</strong> — 天気を表示するアプリ（RosaNauts、和風六曜暦カレンダー）で、
+      天気の取得のために現在地が送信されます</li>
 </ul>
 <p>
   Google の各サービスにおける取り扱いは
@@ -169,12 +167,12 @@
       </tr>
       <tr>
         <td>Bear Alert</td>
-        <td>Only when you choose to send it.</td>
-        <td>Sharing your own location</td>
+        <td>Only when you choose to send it. It is emailed to an address <strong>you configured yourself</strong>; we never receive it.</td>
+        <td>Letting you report your own location</td>
       </tr>
       <tr>
         <td>RosaNauts, Rokuyou Calendar</td>
-        <td>When weather is fetched.</td>
+        <td>When weather is fetched. Sent to the weather provider (Open-Meteo).</td>
         <td>Showing weather for your area</td>
       </tr>
       <tr>
@@ -209,10 +207,13 @@
     only keep whether a purchase was made.
   </p>
 
-  <h2>4. Third parties</h2>
+  <h2>4. Crash logs</h2>
+  <p class="none">We do not collect crash logs.</p>
+
+  <h2>5. Third parties</h2>
   <p>
-    Google Play, Google Play services (location), Google Maps, advertising providers and weather
-    data providers may be used depending on the app. Google's handling of data follows the
+    Google Play, Google Play services (location), Google Maps, advertising providers and
+    Open-Meteo (weather) may be used depending on the app. Google's handling of data follows the
     <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
   </p>
 
