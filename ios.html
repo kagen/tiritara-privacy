@@ -37,7 +37,7 @@
 <header id="ja">
   <p class="brand">tiritara.dev</p>
   <h1>iOSアプリ プライバシーポリシー</h1>
-  <p class="updated">制定・最終更新日：2026年8月26日</p>
+  <p class="updated">制定：2026年8月26日／最終更新日：2026年9月20日</p>
   <nav aria-label="ポリシーのナビゲーション">
     <a href="#en" lang="en">English</a>
     <a href="#apps-ja">アプリ別の取扱情報</a>
@@ -55,8 +55,8 @@
     <li>各アプリの機能を提供するために必要な情報だけを、その目的の範囲で取り扱います。</li>
     <li>端末内で処理・保存する情報と、当方または外部サービスへ送信する情報を区別して説明します。「当方のサーバーへ送信しない」ことは「外部への通信が一切ない」ことを意味しません。</li>
     <li>位置情報やカレンダーなどのアクセス許可が必要な機能は、iOSの許可設定に従います。許可は端末の設定から変更できます。</li>
-    <li>個人情報を販売しません。現在下記に掲載するアプリでは、広告目的で他社へ個人情報を提供しません。</li>
-    <li>将来、広告、分析、アカウント、クラウド同期などの機能を追加する場合は、対象アプリ、情報、目的、送信先、保存・削除方法を事前に明記し、必要な同意を取得します。この記載自体が、それらの機能を現在使用していることや将来の収集への同意を意味するものではありません。</li>
+    <li>個人情報を販売しません。広告を表示するアプリでは、広告配信事業者が広告の配信と計測のために端末や利用状況の情報を取り扱います。どのアプリが広告を表示するかと、その内容は「アプリ別の取扱情報」に記載します。広告を表示しないアプリでは、広告目的で他社へ情報を提供しません。</li>
+    <li>分析、アカウント、クラウド同期など、ここに記載のない取り扱いを追加する場合は、対象アプリ、情報、目的、送信先、保存・削除方法を事前に明記し、必要な同意を取得します。ある機能をこのページで説明していることは、掲載中のすべてのアプリがそれを使用していることを意味しません。使用の有無はアプリごとに「アプリ別の取扱情報」で示します。</li>
   </ul>
 
   <h2 id="apps-ja">2. アプリ別の取扱情報</h2>
@@ -80,6 +80,27 @@
       <dd>当方のアカウント登録は不要です。日記を当方のサーバーへ保存・同期する機能はありません。OSによるバックアップについては第5項をご確認ください。</dd>
     </dl>
   </article>
+  <article class="app" id="dazen">
+    <h3>DaZen（バイノーラルビート瞑想）</h3>
+    <dl>
+      <dt>端末内に保存する情報</dt>
+      <dd>選択した脳波帯、自然音、音の回転、オートジャーニーの入切、音量、自然音の量、周波数といった設定と、Pro版を購入済みかどうかの控え。いずれも端末内にのみ保存します。当方はサーバーを運用しておらず、これらを当方へ送信することはありません。</dd>
+      <dt>音声・センサー・権限</dt>
+      <dd>音はすべて端末内で合成します。マイク、カメラ、位置情報、モーションセンサー、連絡先、カレンダー、写真のいずれも使用せず、許可も求めません。設定の「音の回転」は録音や頭の向きの検知ではなく、合成した音を左右に振る処理です。</dd>
+      <dt>広告</dt>
+      <dd>無料版では画面下にGoogle AdMobのバナー広告を表示します。広告の配信のためGoogleへ通信が発生し、IPアドレス、端末の情報、広告の表示や操作に関する情報が同社で取り扱われます。Pro版を購入すると広告は表示されず、広告SDKの初期化も行いません。</dd>
+      <dt>広告に関する同意（UMP）</dt>
+      <dd>欧州経済領域・英国・スイス、および対象となる米国の州では、広告を読み込む前にGoogleのUser Messaging Platformによる同意フォームを表示します。同意が得られるまで広告は読み込みません。選んだ内容は設定シートの「広告設定を変更」からいつでも選び直せます。この項目は同意の取得が必要な地域でのみ表示されます。</dd>
+      <dt>追跡の許可（ATT）と広告ID（IDFA）</dt>
+      <dd>無料版では、上記の同意フォームのあとにiOSの「トラッキングの許可」を尋ねます。許可した場合に限り広告ID（IDFA）が広告の配信・計測に使われ、他社のアプリやWebサイトをまたいだ計測が行われることがあります。許可しなくてもアプリのすべての機能をお使いいただけます。その場合、広告は非パーソナライズで配信されます。許可はiOSの「設定」からいつでも変更できます。</dd>
+      <dt>アプリ内購入</dt>
+      <dd>Pro版（広告の非表示とバックグラウンド再生）はAppleのStoreKitによる買い切り購入です。アプリは購入状態を確認して機能を解除し、購入の復元に対応します。決済情報はAppleが処理し、当方はカード番号などを受け取りません。</dd>
+      <dt>分析・クラッシュ収集</dt>
+      <dd>独自のアクセス解析・クラッシュ収集SDKを組み込んでいません。Appleによる診断情報の取り扱いは第3項をご確認ください。</dd>
+      <dt>アカウント・独自のクラウド保存</dt>
+      <dd>当方のアカウント登録は不要です。設定や購入状態を当方のサーバーへ保存・同期する機能はありません。OSによるバックアップについては第5項をご確認ください。</dd>
+    </dl>
+  </article>
   <p>この一覧はiOS・iPadOS版が対象です。Android版や一覧にないアプリへ、上記の取り扱いをそのまま当てはめるものではありません。</p>
 
   <h2>3. Appleによる配信・購入・診断情報</h2>
@@ -90,6 +111,7 @@
   <p>各アプリが使用するサービスは第2項に記載します。現在の対象サービスは以下のとおりです。</p>
   <ul>
     <li><strong>Apple：</strong>App Store・StoreKit（配信・購入）、Core Location（位置情報機能）、MapKit（地名検索）、WeatherKit（天気予報）。<a href="https://www.apple.com/jp/legal/privacy/">プライバシーポリシー</a>／<a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weatherのデータ提供元</a>。</li>
+    <li><strong>Google：</strong>広告を表示するアプリでのAdMob（広告の配信・計測）と、User Messaging Platform（広告に関する同意の取得）。IPアドレス、端末の情報、広告の表示や操作に関する情報を取り扱い、追跡を許可した場合は広告ID（IDFA）も使用します。<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>／<a href="https://business.safety.google/privacy/">広告におけるデータの取り扱い</a>。</li>
     <li><strong>Open-Meteo：</strong>天気予報の代替取得先。座標およびIPアドレス等の通信情報を処理します。同社は、技術的な運用や不正利用防止のためのIPアドレスの取扱いと、座標を含み得るサーバーログを90日後に削除する方針を公表しています。最新の取り扱いは<a href="https://open-meteo.com/en/terms">Open-Meteo Terms &amp; Privacy</a>をご確認ください。</li>
     <li><strong>GitHub Pages：</strong>このポリシーページの公開先です。ページを閲覧するとGitHubへ接続し、IPアドレスなどの通信情報が同社で処理されます。<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>をご確認ください。</li>
   </ul>
@@ -115,7 +137,7 @@
 
 <section id="en" lang="en" aria-labelledby="en-title">
   <h2 id="en-title">Privacy Policy for iOS Apps</h2>
-  <p class="updated">Effective and last updated: August 26, 2026</p>
+  <p class="updated">Effective: August 26, 2026 / Last updated: September 20, 2026</p>
   <nav aria-label="English policy navigation"><a href="#ja" lang="ja">日本語</a><a href="#apps-en">App-specific practices</a><a href="#contact-en">Contact</a><a href="./">Android policy</a></nav>
   <p>This policy describes how tiritara.dev (also known as tiritara, “we”) handles information in our iOS and iPadOS apps that link to this page as their privacy policy.</p>
   <div class="summary"><strong>One policy for multiple iOS apps.</strong> Features and service providers differ by app. See the app-specific practices below. New apps and changes in data handling will be added before they are made available.</div>
@@ -125,8 +147,8 @@
     <li>We handle information needed to provide each app’s features, only for the stated purposes.</li>
     <li>We distinguish on-device processing from transmission to us or to external providers. “Not sent to our servers” does not mean that no information leaves the device.</li>
     <li>Features requiring access to location or calendars respect iOS permission settings. You can change permissions in Settings.</li>
-    <li>We do not sell personal information. The apps currently listed below do not share personal information with other companies for advertising.</li>
-    <li>If we introduce advertising, analytics, accounts, cloud sync, or other new processing, we will identify the affected app, data, purpose, recipient, retention and deletion practices in advance and obtain consent when required. This statement is not a claim that these features are currently used, or consent to future collection.</li>
+    <li>We do not sell personal information. In apps that show ads, the advertising provider processes device and usage information to deliver and measure those ads. The app-specific practices below state which apps show ads and what is processed. Apps without ads do not share information with other companies for advertising.</li>
+    <li>If we introduce analytics, accounts, cloud sync, or other processing not described here, we will identify the affected app, data, purpose, recipient, retention and deletion practices in advance and obtain consent when required. Describing a feature on this page does not mean every listed app uses it; the app-specific practices state this per app.</li>
   </ul>
 
   <h2 id="apps-en">2. App-specific practices</h2>
@@ -142,6 +164,19 @@
       <dt>Accounts and developer-operated cloud storage</dt><dd>No developer account is required. Diary entries are not stored or synced to our servers. See section 5 for operating-system backups.</dd>
     </dl>
   </article>
+  <article class="app" id="dazen-en">
+    <h3>DaZen (binaural beat meditation)</h3>
+    <dl>
+      <dt>On-device storage</dt><dd>Your settings — the selected brainwave band, nature sound, sound rotation, auto-journey on/off, volume, nature level and frequency — and a record of whether Pro has been purchased. All of it stays on the device. We operate no servers, and none of this is sent to us.</dd>
+      <dt>Audio, sensors and permissions</dt><dd>All audio is synthesised on the device. The app does not use the microphone, camera, location, motion sensors, contacts, calendars or photos, and does not ask for those permissions. The “sound rotation” setting pans synthesised audio between left and right; it does not record anything or detect head position.</dd>
+      <dt>Advertising</dt><dd>The free version shows a Google AdMob banner at the bottom of the screen. Delivering those ads involves requests to Google, which processes your IP address, device information, and information about ad displays and interactions. Buying Pro removes the ads, and the advertising SDK is then never initialised.</dd>
+      <dt>Advertising consent (UMP)</dt><dd>In the European Economic Area, the United Kingdom and Switzerland, and in applicable US states, the app presents a consent form through Google’s User Messaging Platform before loading any ads. No ads are loaded until consent is resolved. You can revisit your choices at any time through “Change ad settings” in the settings sheet, which appears only where consent is required.</dd>
+      <dt>App Tracking Transparency (ATT) and the advertising identifier (IDFA)</dt><dd>In the free version, iOS’s tracking permission prompt follows the consent form above. Only if you allow it is the advertising identifier (IDFA) used to deliver and measure ads, which can involve measurement across other companies’ apps and websites. Every feature of the app works whether or not you allow it; declining means ads are non-personalised. You can change the permission at any time in iOS Settings.</dd>
+      <dt>In-app purchases</dt><dd>Pro — no ads and background playback — is a one-time purchase through Apple’s StoreKit. The app checks purchase status to unlock the features and supports restoration. Apple handles payment details; we never receive card numbers.</dd>
+      <dt>Analytics and crash reporting</dt><dd>The app includes no separate usage-analytics or crash-reporting SDK. For Apple’s handling of diagnostics, see section 3.</dd>
+      <dt>Accounts and developer-operated cloud storage</dt><dd>No developer account is required. Settings and purchase state are not stored or synced to our servers. See section 5 for operating-system backups.</dd>
+    </dl>
+  </article>
   <p>This list describes iOS and iPadOS versions. These practices must not be assumed to apply to Android versions or apps not listed here.</p>
 
   <h2>3. Apple distribution, purchases and diagnostics</h2>
@@ -152,6 +187,7 @@
   <p>Section 2 identifies the services used by each app. Current services are:</p>
   <ul>
     <li><strong>Apple:</strong> App Store and StoreKit (distribution and purchases), Core Location (location features), MapKit (place search), and WeatherKit (forecasts). <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> / <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather data sources</a>.</li>
+    <li><strong>Google:</strong> in apps that show ads, AdMob (ad delivery and measurement) and the User Messaging Platform (obtaining advertising consent). It processes your IP address, device information, and information about ad displays and interactions, and uses the advertising identifier (IDFA) where you have allowed tracking. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a> and <a href="https://business.safety.google/privacy/">how Google uses data in advertising</a>.</li>
     <li><strong>Open-Meteo:</strong> fallback forecasts, processing coordinates and connection information such as IP addresses. Its published policy describes processing IP addresses for technical operations and abuse prevention, and deleting server logs that may contain coordinates after 90 days. See the current <a href="https://open-meteo.com/en/terms">Terms &amp; Privacy</a>.</li>
     <li><strong>GitHub Pages:</strong> hosting for this policy. Visiting the page connects to GitHub, which processes connection information such as IP addresses. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
   </ul>
