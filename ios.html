@@ -37,7 +37,7 @@
 <header id="ja">
   <p class="brand">tiritara.dev</p>
   <h1>iOSアプリ プライバシーポリシー</h1>
-  <p class="updated">制定：2026年8月26日／最終更新日：2026年9月27日</p>
+  <p class="updated">制定：2026年8月26日／最終更新日：2026年10月22日</p>
   <nav aria-label="ポリシーのナビゲーション">
     <a href="#en" lang="en">English</a>
     <a href="#apps-ja">アプリ別の取扱情報</a>
@@ -124,6 +124,29 @@
       <dd>当方のアカウント登録は不要です。設定や画像を当方のサーバーへ保存・同期する機能はありません。OSによるバックアップについては第5項をご確認ください。</dd>
     </dl>
   </article>
+  <article class="app" id="flightchess">
+    <h3>飛行棋ー空中大激闘（Aeroplane Chess）</h3>
+    <dl>
+      <dt>端末内に保存する情報</dt>
+      <dd>途中の対局（盤面、得点、撃墜数、キャラクター同士の好感度）、対戦設定（参加者、人間／CPU、キャラクター、表示名、勝敗ルール、離陸条件）、表示言語、盤面の表示設定、完走した対局の回数。いずれも端末内にのみ保存します。当方はサーバーを運用しておらず、これらを当方へ送信することはありません。</dd>
+      <dt>App Storeへの問い合わせ</dt>
+      <dd>「レビューを書く」「アプリを共有」のリンクを作るため、AppleのiTunes Search APIにこのアプリのバンドルIDを問い合わせ、App StoreのIDを取得します。利用者や対局に関する情報は送りません。</dd>
+      <dt>音・権限</dt>
+      <dd>サイコロの音は端末内で合成します。マイク、カメラ、位置情報、モーションセンサー、連絡先、カレンダー、写真のいずれも使用せず、許可も求めません。</dd>
+      <dt>広告</dt>
+      <dd>メニュー画面下にGoogle AdMobのバナー広告を、対局中は50ターンごとに全画面広告を表示します。対局の再開時には、見ると全画面広告が表示されなくなる動画広告を選べます。広告の配信のためGoogleへ通信が発生し、IPアドレス、端末の情報、広告の表示や操作に関する情報が同社で取り扱われます。対局の内容や設定を広告のために送ることはありません。「広告を削除」を購入すると広告は表示されず、広告SDKの初期化も行いません。</dd>
+      <dt>広告に関する同意（UMP）</dt>
+      <dd>欧州経済領域・英国・スイス、および対象となる米国の州では、広告を読み込む前にGoogleのUser Messaging Platformによる同意フォームを表示します。同意が得られるまで広告は読み込みません。選んだ内容はメニュー画面の「広告のプライバシー設定」からいつでも選び直せます。この項目は同意の取得が必要な地域でのみ表示されます。</dd>
+      <dt>追跡（トラッキング）と広告ID（IDFA）</dt>
+      <dd>iOSの「トラッキングの許可」を尋ねず、広告ID（IDFA）を取得しません。他社のアプリやWebサイトをまたいだ追跡は行わず、広告は利用者を追跡しない形で配信されます。広告の成果の計測には、利用者を特定しないAppleのSKAdNetworkが使われます。</dd>
+      <dt>アプリ内購入</dt>
+      <dd>広告を表示しなくなる「広告を削除」を、AppleのStoreKitによる買い切りで提供します。アプリは購入状態を確認して広告を止め、購入の復元に対応します。決済情報はAppleが処理し、当方はカード番号などを受け取りません。</dd>
+      <dt>分析・クラッシュ収集</dt>
+      <dd>独自のアクセス解析・クラッシュ収集SDKを組み込んでいません。Appleによる診断情報の取り扱いは第3項をご確認ください。</dd>
+      <dt>アカウント・独自のクラウド保存</dt>
+      <dd>当方のアカウント登録は不要です。対局や設定を当方のサーバーへ保存・同期する機能はありません。OSによるバックアップについては第5項をご確認ください。</dd>
+    </dl>
+  </article>
   <p>この一覧はiOS・iPadOS版が対象です。Android版や一覧にないアプリへ、上記の取り扱いをそのまま当てはめるものではありません。</p>
 
   <h2>3. Appleによる配信・購入・診断情報</h2>
@@ -160,7 +183,7 @@
 
 <section id="en" lang="en" aria-labelledby="en-title">
   <h2 id="en-title">Privacy Policy for iOS Apps</h2>
-  <p class="updated">Effective: August 26, 2026 / Last updated: September 27, 2026</p>
+  <p class="updated">Effective: August 26, 2026 / Last updated: October 22, 2026</p>
   <nav aria-label="English policy navigation"><a href="#ja" lang="ja">日本語</a><a href="#apps-en">App-specific practices</a><a href="#contact-en">Contact</a><a href="./">Android policy</a></nav>
   <p>This policy describes how tiritara.dev (also known as tiritara, “we”) handles information in our iOS and iPadOS apps that link to this page as their privacy policy.</p>
   <div class="summary"><strong>One policy for multiple iOS apps.</strong> Features and service providers differ by app. See the app-specific practices below. New apps and changes in data handling will be added before they are made available.</div>
@@ -212,6 +235,20 @@
       <dt>In-app purchases</dt><dd>Premium, which removes the ads, is a one-time purchase through Apple’s StoreKit. The app checks purchase status to unlock it and supports restoration. Apple handles payment details; we never receive card numbers.</dd>
       <dt>Analytics and crash reporting</dt><dd>The app includes no separate usage-analytics or crash-reporting SDK. For Apple’s handling of diagnostics, see section 3.</dd>
       <dt>Accounts and developer-operated cloud storage</dt><dd>No developer account is required. Settings and images are not stored or synced to our servers. See section 5 for operating-system backups.</dd>
+    </dl>
+  </article>
+  <article class="app" id="flightchess-en">
+    <h3>Aeroplane Chess (飛行棋ー空中大激闘)</h3>
+    <dl>
+      <dt>On-device storage</dt><dd>The match in progress (board, scores, captures and the characters’ relationships), the match setup (players, human or computer, characters, display names, game mode and takeoff rule), the display language, board view settings and the number of completed matches. All of it stays on the device. We operate no servers, and none of this is sent to us.</dd>
+      <dt>App Store lookup</dt><dd>To build the “Write a review” and “Share this app” links, the app asks Apple’s iTunes Search API for its own App Store ID using the app’s bundle ID. No information about you or your matches is sent.</dd>
+      <dt>Sound and permissions</dt><dd>The dice sound is synthesized on the device. The app does not use the microphone, camera, location, motion sensors, contacts, calendars or photos, and asks for none of these permissions.</dd>
+      <dt>Advertising</dt><dd>The app shows a Google AdMob banner on the menu screen and a full-screen ad every 50 turns during a match. When resuming a match you may choose to watch a video ad, which turns off the full-screen ads for that match. Delivering those ads involves requests to Google, which processes your IP address, device information, and information about ad displays and interactions. Your matches and settings are never sent for advertising. Buying “Remove ads” removes the ads, and the advertising SDK is then never initialised.</dd>
+      <dt>Advertising consent (UMP)</dt><dd>In the European Economic Area, the United Kingdom and Switzerland, and in applicable US states, the app presents a consent form through Google’s User Messaging Platform before loading any ads. No ads are loaded until consent is resolved. You can revisit your choices at any time through “Ad privacy settings” on the menu screen, which appears only where consent is required.</dd>
+      <dt>Tracking and the advertising identifier (IDFA)</dt><dd>The app does not show iOS’s tracking permission prompt and does not access the advertising identifier (IDFA). It does not track you across other companies’ apps or websites, and ads are served without tracking. Ad conversions are measured with Apple’s SKAdNetwork, which does not identify you.</dd>
+      <dt>In-app purchases</dt><dd>“Remove ads” is a one-time purchase through Apple’s StoreKit. The app checks purchase status to stop the ads and supports restoration. Apple handles payment details; we never receive card numbers.</dd>
+      <dt>Analytics and crash reporting</dt><dd>The app includes no separate usage-analytics or crash-reporting SDK. For Apple’s handling of diagnostics, see section 3.</dd>
+      <dt>Accounts and developer-operated cloud storage</dt><dd>No developer account is required. Matches and settings are not stored or synced to our servers. See section 5 for operating-system backups.</dd>
     </dl>
   </article>
   <p>This list describes iOS and iPadOS versions. These practices must not be assumed to apply to Android versions or apps not listed here.</p>
