@@ -45,7 +45,7 @@
 <nav aria-label="Platform policies"><strong>Android</strong> · <a href="ios.html">iOS・iPadOSアプリ向け / iOS apps</a></nav>
 
 <h1>プライバシーポリシー</h1>
-<p class="updated">最終更新日: 2026年11月6日</p>
+<p class="updated">最終更新日: 2026年11月14日</p>
 
 <p>
   開発者 tiritara（以下「当方」）が公開する<span class="appName">アプリ</span>について、
@@ -134,7 +134,25 @@
 <h2>4. クラッシュログ・利用統計</h2>
 <p class="none">当方はクラッシュログを取得していません。</p>
 
-<h2>5. 第三者サービス</h2>
+<h2 id="mahjong">5. オンライン対戦（ロン！俺雀荘）</h2>
+<p>ロン！俺雀荘では、オンライン対戦を使うときだけ、次の情報を Google の Firebase に送ります。CPU 戦ではこれらを送りません。</p>
+<ul>
+  <li><strong>同意：</strong>初めてオンライン対戦を開くとき、送る情報と表示される相手を説明し、同意をいただいてから使います。同意しない場合、オンライン対戦は始まらず、CPU 戦はそのまま遊べます。</li>
+  <li><strong>送る情報：</strong>Firebase Authentication で発行する匿名のユーザー ID（メールアドレスなどの登録はありません）と、Cloud Firestore（東京リージョン）に保存する部屋の情報です。部屋の情報は、部屋コード、公開・非公開の別、席に着いた人の名前とユーザー ID、プロフィール写真（縮小した JPEG）、対局の進行（卓の状態と各自の手牌）、接続中かどうかの記録です。</li>
+  <li><strong>表示される相手：</strong>名前と写真は同じ卓の人に表示され、公開の部屋では部屋の一覧にも表示されます。手牌は本人と、卓を進める端末（ホスト）だけが読めます。</li>
+  <li><strong>カメラ・写真：</strong>プロフィール写真を撮る・選ぶときだけ、端末のカメラアプリまたは写真の選択画面を使います。アクセス許可は求めません。選んだ写真は端末内で縮小して保存します。</li>
+  <li><strong>端末内に保存する情報：</strong>プロフィールの名前と写真、オンライン対戦の通算ポイントと局数、同意の有無、表示や音の設定。通算ポイントを当方へ送ることはありません。</li>
+  <li><strong>広告：</strong>CPU 戦の局と局の間にだけ全画面広告を表示することがあります（3分以上の間隔をあけます）。対局中とオンライン対戦中は表示しません。Pro 版を購入すると表示されません。</li>
+</ul>
+<h3 id="mahjong-delete">オンライン対戦の情報の保存期間と削除の方法</h3>
+<ul>
+  <li><strong>削除されるもの：</strong>部屋の情報（名前、ユーザー ID、プロフィール写真、対局の進行、接続の記録）。</li>
+  <li><strong>自動の削除：</strong>ホストが部屋を閉じたときに削除します。閉じられなかった部屋の情報は、最後に書き込まれてから 24 時間を過ぎると自動削除の対象となり、通常はその後 24 時間以内に Firestore の仕組みで削除されます。</li>
+  <li><strong>削除の依頼：</strong>部屋が残っている間に削除を希望される場合は、アプリ名「ロン！俺雀荘」と部屋コードを添えて <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a> へご連絡ください。確認のうえ削除します。</li>
+  <li><strong>残るもの：</strong>匿名のユーザー ID は Firebase Authentication に残りますが、名前や写真とは結び付かず、アプリを削除すると使われなくなります。端末内の名前・写真・通算ポイントは、アプリ内で消すかアプリを削除すると消えます。Google Play の購入記録は Google の方針に従います。</li>
+</ul>
+
+<h2>6. 第三者サービス</h2>
 <ul>
   <li><strong>Google Play</strong> — アプリの配信と課金処理</li>
   <li><strong>Google Play 開発者サービス</strong> — 位置情報の取得（位置情報を使うアプリのみ）</li>
@@ -142,29 +160,30 @@
   <li><strong>広告配信事業者</strong> — 広告を表示するアプリのみ</li>
   <li><strong>Open-Meteo</strong> — 天気を表示するアプリ（RosaNauts、和風六曜暦カレンダー）で、
       天気の取得のために現在地が送信されます</li>
+  <li><strong>Google Firebase</strong>（Authentication・Cloud Firestore） — オンライン対戦（ロン！俺雀荘）で、匿名のユーザー ID と部屋の情報を保存します（第5項）</li>
 </ul>
 <p>
   Google の各サービスにおける取り扱いは
   <a href="https://policies.google.com/privacy">Google のプライバシーポリシー</a>に従います。
 </p>
 
-<h2>6. 児童の安全</h2>
+<h2>7. 児童の安全</h2>
 <p>
   児童の性的虐待および搾取（CSAE）に対する方針は<a href="child-safety.html">こちら</a>をご覧ください。
 </p>
 
-<h2>7. お問い合わせ</h2>
+<h2>8. お問い合わせ</h2>
 <p>
   ご不明点、および保存された情報の削除のご依頼は以下へご連絡ください。<br>
   開発者メール: <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a>
 </p>
 
-<h2>8. 改定</h2>
+<h2>9. 改定</h2>
 <p>本ポリシーは必要に応じて更新されます。変更がある場合は本ページの最終更新日を改めます。</p>
 
 <div class="lang">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 6 November 2026</p>
+  <p class="updated">Last updated: 14 November 2026</p>
 
   <p>
     This policy covers the apps published by the developer tiritara. What is handled differs
@@ -246,14 +265,35 @@
   <h2>4. Crash logs</h2>
   <p class="none">We do not collect crash logs.</p>
 
-  <h2>5. Third parties</h2>
+  <h2 id="mahjong-en">5. Online play (Ron! Ore Janso)</h2>
   <p>
-    Google Play, Google Play services (location), Google Maps, advertising providers and
-    Open-Meteo (weather) may be used depending on the app. Google's handling of data follows the
+    Only when you use online play, Ron! Ore Janso sends the following to Google Firebase. None of
+    it is sent in games against the CPU. The first time you open online play, the app explains
+    what it sends and who sees it, and asks for your agreement; if you do not agree, online play
+    does not start.
+  </p>
+  <ul>
+    <li><strong>What is sent:</strong> an anonymous user ID from Firebase Authentication (no email address or other registration), and the room stored in Cloud Firestore (Tokyo region): the room code, whether it is public, the names and user IDs of the people seated, their profile pictures (small JPEGs), the progress of the game (the table and each player&rsquo;s tiles), and whether each player is connected.</li>
+    <li><strong>Who sees it:</strong> names and pictures are shown to the others at your table and, for public rooms, in the room list. Your tiles can be read only by you and the device running the table (the host).</li>
+    <li><strong>Camera and photos:</strong> the device&rsquo;s camera app or the photo picker is used only when you take or choose a profile picture, without asking for a permission. The picture is shrunk on the device before it is stored.</li>
+    <li><strong>Advertising:</strong> full-screen ads may be shown only between hands in games against the CPU (at least three minutes apart), never during a hand or in online play, and not at all after buying Pro.</li>
+  </ul>
+  <h3 id="mahjong-delete-en">Retention and how to request deletion</h3>
+  <ul>
+    <li><strong>What is deleted:</strong> the room&rsquo;s data (names, user IDs, profile pictures, game progress and connection records).</li>
+    <li><strong>Automatic deletion:</strong> when the host closes the room. Data of a room nobody closed becomes due for deletion 24 hours after it was last written and is normally removed by Firestore within the following 24 hours.</li>
+    <li><strong>Requesting deletion:</strong> to ask for deletion while a room still exists, email <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a> with the app name &ldquo;Ron! Ore Janso&rdquo; and the room code. We will delete it after checking.</li>
+    <li><strong>What remains:</strong> the anonymous user ID stays in Firebase Authentication, linked to no name or picture, and stops being used when you delete the app. Your name, picture and running points on the device are removed when you clear them in the app or delete the app. Google Play purchase records follow Google&rsquo;s policies.</li>
+  </ul>
+
+  <h2>6. Third parties</h2>
+  <p>
+    Google Play, Google Play services (location), Google Maps, advertising providers,
+    Open-Meteo (weather) and Google Firebase (online play in Ron! Ore Janso, section 5) may be used depending on the app. Google's handling of data follows the
     <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
   </p>
 
-  <h2>5. Contact</h2>
+  <h2>7. Contact</h2>
   <p>
     Questions and deletion requests:
     <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a>

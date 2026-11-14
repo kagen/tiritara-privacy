@@ -37,7 +37,7 @@
 <header id="ja">
   <p class="brand">tiritara.dev</p>
   <h1>iOSアプリ プライバシーポリシー</h1>
-  <p class="updated">制定：2026年8月26日／最終更新日：2026年11月11日</p>
+  <p class="updated">制定：2026年8月26日／最終更新日：2026年11月14日</p>
   <nav aria-label="ポリシーのナビゲーション">
     <a href="#en" lang="en">English</a>
     <a href="#apps-ja">アプリ別の取扱情報</a>
@@ -195,6 +195,32 @@
       <dd>当方のアカウント登録は不要です。記録を当方のサーバーへ保存・同期する機能はありません。OSによるバックアップについては第5項をご確認ください。</dd>
     </dl>
   </article>
+  <article class="app" id="mahjong">
+    <h3>ロン！俺雀荘（Ron! Ore Janso）</h3>
+    <dl>
+      <dt>端末内に保存する情報</dt>
+      <dd>表示言語、テーブルの背景、音の設定、プロフィールの名前と写真、オンライン対戦の通算ポイントと局数、オンライン対戦への同意の有無、Pro 版を購入済みかどうかの控え。いずれも端末内に保存します。通算ポイントを当方へ送ることはありません。</dd>
+      <dt>オンライン対戦（Google Firebase）</dt>
+      <dd>初めてオンライン対戦を開くとき、送る情報と表示される相手を説明し、同意をいただいてから使います。同意しない場合、オンライン対戦は始まらず、CPU戦はそのまま遊べます。</dd>
+      <dd>オンライン対戦を使うときだけ、GoogleのFirebase Authenticationで匿名のユーザーIDを発行し（メールアドレスなどの登録はありません）、Cloud Firestore（東京リージョン）に部屋の情報を保存します。保存するのは、部屋コード、公開・非公開の別、席に着いた人の名前とユーザーID、プロフィール写真（縮小したJPEG）、対局の進行（卓の状態と各自の手牌）、接続中かどうかの記録です。名前と写真は同じ卓の人に表示され、公開の部屋では部屋の一覧にも表示されます。手牌は本人と、卓を進める端末（ホスト）だけが読めます。CPU戦ではこれらを送りません。</dd>
+      <dt>オンライン対戦の情報の保存期間と削除</dt>
+      <dd>部屋の情報は、ホストが部屋を閉じたときに削除します。閉じられなかった部屋の情報は、最後に書き込まれてから24時間を過ぎると自動削除の対象となり、通常はその後24時間以内にFirestoreの仕組みで削除されます。部屋が残っている間に削除を希望される場合は、部屋コードを添えて第6項の窓口へご連絡ください。匿名のユーザーIDはアプリを削除すると使われなくなります。</dd>
+      <dt>カメラ・写真</dt>
+      <dd>プロフィール写真を撮る・選ぶときだけ、カメラまたは写真の選択画面を使います。選んだ写真は端末内で縮小してから保存します。それ以外の写真にはアクセスしません。</dd>
+      <dt>広告</dt>
+      <dd>CPU戦で、局と局の間にGoogle AdMobの全画面広告を表示することがあります（3分以上の間隔をあけます）。対局中とオンライン対戦中には表示しません。広告の配信のためGoogleへ通信が発生し、IPアドレス、端末の情報、広告の表示や操作に関する情報が同社で取り扱われます。対局の内容や名前・写真を広告のために送ることはありません。Pro 版を購入すると広告は表示されません。</dd>
+      <dt>広告に関する同意（UMP）</dt>
+      <dd>欧州経済領域・英国・スイス、および対象となる米国の州では、広告を読み込む前にGoogleのUser Messaging Platformによる同意フォームを表示します。同意が得られるまで広告は読み込みません。選んだ内容は「設定」の「広告のプライバシー設定」からいつでも選び直せます。この項目は同意の取得が必要な地域でのみ表示されます。</dd>
+      <dt>追跡（トラッキング）と広告ID（IDFA）</dt>
+      <dd>iOSの「トラッキングの許可」を尋ねず、広告ID（IDFA）を取得しません。他社のアプリやWebサイトをまたいだ追跡は行わず、広告は利用者を追跡しない形で配信されます。広告の成果の計測には、利用者を特定しないAppleのSKAdNetworkが使われます。</dd>
+      <dt>アプリ内購入</dt>
+      <dd>CPU戦の広告をなくし、非公開の部屋を作れるようにする「Pro 版」を、AppleのStoreKitによる買い切りで提供します。アプリは購入状態を確認して機能を解除し、購入の復元に対応します。決済情報はAppleが処理し、当方はカード番号などを受け取りません。</dd>
+      <dt>分析・クラッシュ収集</dt>
+      <dd>独自のアクセス解析・クラッシュ収集SDKを組み込んでいません。Appleによる診断情報の取り扱いは第3項をご確認ください。</dd>
+      <dt>アカウント</dt>
+      <dd>当方のアカウント登録は不要です。オンライン対戦で使う匿名のユーザーIDのほかに、利用者を識別する情報は作りません。</dd>
+    </dl>
+  </article>
   <p>この一覧はiOS・iPadOS版が対象です。Android版や一覧にないアプリへ、上記の取り扱いをそのまま当てはめるものではありません。</p>
 
   <h2>3. Appleによる配信・購入・診断情報</h2>
@@ -205,7 +231,7 @@
   <p>各アプリが使用するサービスは第2項に記載します。現在の対象サービスは以下のとおりです。</p>
   <ul>
     <li><strong>Apple：</strong>App Store・StoreKit（配信・購入）、Core Location（位置情報機能）、MapKit（地名検索）、WeatherKit（天気予報）。<a href="https://www.apple.com/jp/legal/privacy/">プライバシーポリシー</a>／<a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weatherのデータ提供元</a>。</li>
-    <li><strong>Google：</strong>広告を表示するアプリでのAdMob（広告の配信・計測）と、User Messaging Platform（広告に関する同意の取得）。IPアドレス、端末の情報、広告の表示や操作に関する情報を取り扱い、追跡を許可した場合は広告ID（IDFA）も使用します。<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>／<a href="https://business.safety.google/privacy/">広告におけるデータの取り扱い</a>。</li>
+    <li><strong>Google：</strong>広告を表示するアプリでのAdMob（広告の配信・計測）と、User Messaging Platform（広告に関する同意の取得）。IPアドレス、端末の情報、広告の表示や操作に関する情報を取り扱い、追跡を許可した場合は広告ID（IDFA）も使用します。<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>／<a href="https://business.safety.google/privacy/">広告におけるデータの取り扱い</a>。オンライン対戦のあるアプリ（ロン！俺雀荘）では、Firebase Authentication（匿名のユーザーID）とCloud Firestore（オンライン対戦の部屋の情報、東京リージョン）も使用します。<a href="https://firebase.google.com/support/privacy?hl=ja">Firebaseのプライバシーとセキュリティ</a>。</li>
     <li><strong>Open-Meteo：</strong>天気予報の代替取得先。座標およびIPアドレス等の通信情報を処理します。同社は、技術的な運用や不正利用防止のためのIPアドレスの取扱いと、座標を含み得るサーバーログを90日後に削除する方針を公表しています。最新の取り扱いは<a href="https://open-meteo.com/en/terms">Open-Meteo Terms &amp; Privacy</a>をご確認ください。</li>
     <li><strong>GitHub Pages：</strong>このポリシーページの公開先です。ページを閲覧するとGitHubへ接続し、IPアドレスなどの通信情報が同社で処理されます。<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>をご確認ください。</li>
   </ul>
@@ -216,6 +242,7 @@
     <li><strong>端末内データ：</strong>日記などは、利用者がアプリ内で削除するかアプリを端末から削除するまで保存します。天気キャッシュは新しい取得結果で更新されます。「Appを取り除く」はデータを残す場合があり、「Appを削除」とは異なります。</li>
     <li><strong>バックアップ：</strong>端末の設定によっては、アプリのデータがiCloudやコンピュータへのOS標準バックアップに含まれる場合があります。アプリの削除だけで既存のバックアップが消えるわけではありません。バックアップの削除はAppleまたは使用するバックアップ機能の設定で行ってください。</li>
     <li><strong>権限：</strong>位置情報やカレンダーへの許可はiOSの設定から取り消せます。許可の取消しだけでは、既に保存した日記や選択地域などは削除されません。アプリを削除しても元のカレンダー予定は削除しません。</li>
+    <li><strong>オンライン対戦の情報：</strong>部屋を閉じたとき、または最後に書き込まれてから24時間を過ぎたあと（通常はさらに24時間以内）に削除します。詳しくは第2項の各アプリの説明をご確認ください。</li>
     <li><strong>当方が保持しない情報：</strong>当方は端末内だけにある日記などを遠隔で閲覧・削除できません。</li>
     <li><strong>外部サービスの記録：</strong>Appleの購入記録やOpen-Meteoのログ等は、各サービスの保存・削除方針に従います。当方が直接削除できるものではありません。</li>
   </ul>
@@ -231,7 +258,7 @@
 
 <section id="en" lang="en" aria-labelledby="en-title">
   <h2 id="en-title">Privacy Policy for iOS Apps</h2>
-  <p class="updated">Effective: August 26, 2026 / Last updated: November 11, 2026</p>
+  <p class="updated">Effective: August 26, 2026 / Last updated: November 14, 2026</p>
   <nav aria-label="English policy navigation"><a href="#ja" lang="ja">日本語</a><a href="#apps-en">App-specific practices</a><a href="#contact-en">Contact</a><a href="./">Android policy</a></nav>
   <p>This policy describes how tiritara.dev (also known as tiritara, “we”) handles information in our iOS and iPadOS apps that link to this page as their privacy policy.</p>
   <div class="summary"><strong>One policy for multiple iOS apps.</strong> Features and service providers differ by app. See the app-specific practices below. New apps and changes in data handling will be added before they are made available.</div>
@@ -328,6 +355,22 @@
       <dt>Accounts and developer-operated cloud storage</dt><dd>No developer account is required. Records are not stored or synced to our servers. See section 5 for operating-system backups.</dd>
     </dl>
   </article>
+  <article class="app" id="mahjong-en">
+    <h3>Ron! Ore Janso (ロン！俺雀荘)</h3>
+    <dl>
+      <dt>On-device storage</dt><dd>The display language, table background, sound settings, your profile name and picture, your running online points and hand count, whether you agreed to online play, and a record of whether Pro has been purchased. All of it is stored on the device. Your running points are never sent to us.</dd>
+      <dt>Online play (Google Firebase)</dt><dd>The first time you open online play, the app explains what it sends and who sees it, and asks for your agreement. If you do not agree, online play does not start and games against the CPU work as before.</dd>
+      <dd>Only when you use online play, the app gets an anonymous user ID from Google’s Firebase Authentication (you register no email address or other details) and stores the room in Cloud Firestore (Tokyo region): the room code, whether it is public, the names and user IDs of the people seated, their profile pictures (small JPEGs), the progress of the game (the table and each player’s tiles), and whether each player is connected. Names and pictures are shown to the others at your table and, for public rooms, in the room list. Your tiles can be read only by you and by the device running the table (the host). None of this is sent in games against the CPU.</dd>
+      <dt>Retention and deletion of online play data</dt><dd>A room’s data is deleted when its host closes the room. Data of a room nobody closed becomes due for deletion 24 hours after it was last written and is normally removed by Firestore within the following 24 hours. To ask for deletion while a room still exists, contact us (section 6) with the room code. The anonymous user ID stops being used when you delete the app.</dd>
+      <dt>Camera and photos</dt><dd>The camera or the photo picker is used only when you take or choose a profile picture. The chosen picture is shrunk on the device before it is stored. The app accesses no other photos.</dd>
+      <dt>Advertising</dt><dd>In games against the CPU, a Google AdMob full-screen ad may be shown between hands (at least three minutes apart). No ads are shown during a hand or in online play. Delivering those ads involves requests to Google, which processes your IP address, device information, and information about ad displays and interactions. The game, your name and your picture are never sent for advertising. Buying Pro removes the ads.</dd>
+      <dt>Advertising consent (UMP)</dt><dd>In the European Economic Area, the United Kingdom and Switzerland, and in applicable US states, the app presents a consent form through Google’s User Messaging Platform before loading any ads. No ads are loaded until consent is resolved. You can revisit your choices at any time through “Ad privacy settings” in Settings, which appears only where consent is required.</dd>
+      <dt>Tracking and the advertising identifier (IDFA)</dt><dd>The app does not show iOS’s tracking permission prompt and does not access the advertising identifier (IDFA). It does not track you across other companies’ apps or websites, and ads are served without tracking. Ad conversions are measured with Apple’s SKAdNetwork, which does not identify you.</dd>
+      <dt>In-app purchases</dt><dd>Pro, which removes the ads in games against the CPU and lets you create private rooms, is a one-time purchase through Apple’s StoreKit. The app checks purchase status to unlock it and supports restoration. Apple handles payment details; we never receive card numbers.</dd>
+      <dt>Analytics and crash reporting</dt><dd>The app includes no separate usage-analytics or crash-reporting SDK. For Apple’s handling of diagnostics, see section 3.</dd>
+      <dt>Accounts</dt><dd>No developer account is required. Apart from the anonymous user ID used for online play, the app creates nothing that identifies you.</dd>
+    </dl>
+  </article>
   <p>This list describes iOS and iPadOS versions. These practices must not be assumed to apply to Android versions or apps not listed here.</p>
 
   <h2>3. Apple distribution, purchases and diagnostics</h2>
@@ -338,7 +381,7 @@
   <p>Section 2 identifies the services used by each app. Current services are:</p>
   <ul>
     <li><strong>Apple:</strong> App Store and StoreKit (distribution and purchases), Core Location (location features), MapKit (place search), and WeatherKit (forecasts). <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> / <a href="https://weatherkit.apple.com/legal-attribution.html">Apple Weather data sources</a>.</li>
-    <li><strong>Google:</strong> in apps that show ads, AdMob (ad delivery and measurement) and the User Messaging Platform (obtaining advertising consent). It processes your IP address, device information, and information about ad displays and interactions, and uses the advertising identifier (IDFA) where you have allowed tracking. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a> and <a href="https://business.safety.google/privacy/">how Google uses data in advertising</a>.</li>
+    <li><strong>Google:</strong> in apps that show ads, AdMob (ad delivery and measurement) and the User Messaging Platform (obtaining advertising consent). It processes your IP address, device information, and information about ad displays and interactions, and uses the advertising identifier (IDFA) where you have allowed tracking. See <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a> and <a href="https://business.safety.google/privacy/">how Google uses data in advertising</a>. In apps with online play (Ron! Ore Janso), Firebase Authentication (an anonymous user ID) and Cloud Firestore (online rooms, Tokyo region) are also used. See <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.</li>
     <li><strong>Open-Meteo:</strong> fallback forecasts, processing coordinates and connection information such as IP addresses. Its published policy describes processing IP addresses for technical operations and abuse prevention, and deleting server logs that may contain coordinates after 90 days. See the current <a href="https://open-meteo.com/en/terms">Terms &amp; Privacy</a>.</li>
     <li><strong>GitHub Pages:</strong> hosting for this policy. Visiting the page connects to GitHub, which processes connection information such as IP addresses. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
   </ul>
@@ -349,6 +392,7 @@
     <li><strong>On-device data:</strong> diary entries remain until you delete them in the app or delete the app from your device. New forecasts replace the forecast cache. Offloading an app can retain its data and is different from deleting it.</li>
     <li><strong>Backups:</strong> depending on your settings, app data may be included in operating-system backups to iCloud or a computer. Deleting the app does not remove existing backups. Manage or delete backups through Apple or your backup tools.</li>
     <li><strong>Permissions:</strong> revoke location or calendar access in iOS Settings. Revocation does not itself delete saved diary entries or selected regions. Deleting the app does not delete the original calendar events.</li>
+    <li><strong>Online play data:</strong> deleted when the room closes, or after 24 hours without writes (normally within a further 24 hours). See the app’s entry in section 2.</li>
     <li><strong>Data we do not hold:</strong> we cannot remotely read or delete diary entries stored only on your device.</li>
     <li><strong>Provider records:</strong> Apple purchase records and Open-Meteo logs follow the providers’ retention and deletion policies. We cannot directly delete those records.</li>
   </ul>
