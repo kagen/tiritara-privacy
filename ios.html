@@ -203,6 +203,8 @@
       <dt>オンライン対戦（Google Firebase）</dt>
       <dd>初めてオンライン対戦を開くとき、送る情報と表示される相手を説明し、同意をいただいてから使います。同意しない場合、オンライン対戦は始まらず、CPU戦はそのまま遊べます。</dd>
       <dd>オンライン対戦を使うときだけ、GoogleのFirebase Authenticationで匿名のユーザーIDを発行し（メールアドレスなどの登録はありません）、Cloud Firestore（東京リージョン）に部屋の情報を保存します。保存するのは、部屋コード、公開・非公開の別、席に着いた人の名前とユーザーID、プロフィール写真（縮小したJPEG）、対局の進行（卓の状態と各自の手牌）、接続中かどうかの記録です。名前と写真は同じ卓の人に表示され、公開の部屋では部屋の一覧にも表示されます。手牌は本人と、卓を進める端末（ホスト）だけが読めます。CPU戦ではこれらを送りません。</dd>
+      <dt>通報とブロック</dt>
+      <dd>オンライン対戦では、ほかのプレイヤーを通報・ブロックできます。通報すると、部屋コード、通報した人と通報された人の匿名のユーザーID、理由、通報された人の名前とプロフィール写真（表示されていたもののコピー）をCloud Firestoreに保存し、当方が確認します。通報の記録は30日で自動的に削除します。ルールに反する名前や写真を使った利用者は、匿名のユーザーIDを記録してオンライン対戦の利用を止めることがあります。ブロックした相手の一覧は端末内にだけ保存し、当方へは送りません。</dd>
       <dt>オンライン対戦の情報の保存期間と削除</dt>
       <dd>部屋の情報は、ホストが部屋を閉じたときに削除します。閉じられなかった部屋の情報は、最後に書き込まれてから24時間を過ぎると自動削除の対象となり、通常はその後24時間以内にFirestoreの仕組みで削除されます。部屋が残っている間に削除を希望される場合は、部屋コードを添えて第6項の窓口へご連絡ください。匿名のユーザーIDはアプリを削除すると使われなくなります。</dd>
       <dt>カメラ・写真</dt>
@@ -267,7 +269,7 @@
     <li><strong>端末内データ：</strong>日記などは、利用者がアプリ内で削除するかアプリを端末から削除するまで保存します。天気キャッシュは新しい取得結果で更新されます。「Appを取り除く」はデータを残す場合があり、「Appを削除」とは異なります。</li>
     <li><strong>バックアップ：</strong>端末の設定によっては、アプリのデータがiCloudやコンピュータへのOS標準バックアップに含まれる場合があります。アプリの削除だけで既存のバックアップが消えるわけではありません。バックアップの削除はAppleまたは使用するバックアップ機能の設定で行ってください。</li>
     <li><strong>権限：</strong>位置情報やカレンダーへの許可はiOSの設定から取り消せます。許可の取消しだけでは、既に保存した日記や選択地域などは削除されません。アプリを削除しても元のカレンダー予定は削除しません。</li>
-    <li><strong>オンライン対戦の情報：</strong>部屋を閉じたとき、または最後に書き込まれてから24時間を過ぎたあと（通常はさらに24時間以内）に削除します。詳しくは第2項の各アプリの説明をご確認ください。</li>
+    <li><strong>オンライン対戦の情報：</strong>部屋を閉じたとき、または最後に書き込まれてから24時間を過ぎたあと（通常はさらに24時間以内）に削除します。通報の記録は30日で削除します。詳しくは第2項の各アプリの説明をご確認ください。</li>
     <li><strong>当方が保持しない情報：</strong>当方は端末内だけにある日記などを遠隔で閲覧・削除できません。</li>
     <li><strong>外部サービスの記録：</strong>Appleの購入記録やOpen-Meteoのログ等は、各サービスの保存・削除方針に従います。当方が直接削除できるものではありません。</li>
   </ul>
@@ -386,6 +388,7 @@
       <dt>On-device storage</dt><dd>The display language, table background, sound settings, your profile name and picture, your running online points and hand count, whether you agreed to online play, and a record of whether Pro has been purchased. All of it is stored on the device. Your running points are never sent to us.</dd>
       <dt>Online play (Google Firebase)</dt><dd>The first time you open online play, the app explains what it sends and who sees it, and asks for your agreement. If you do not agree, online play does not start and games against the CPU work as before.</dd>
       <dd>Only when you use online play, the app gets an anonymous user ID from Google’s Firebase Authentication (you register no email address or other details) and stores the room in Cloud Firestore (Tokyo region): the room code, whether it is public, the names and user IDs of the people seated, their profile pictures (small JPEGs), the progress of the game (the table and each player’s tiles), and whether each player is connected. Names and pictures are shown to the others at your table and, for public rooms, in the room list. Your tiles can be read only by you and by the device running the table (the host). None of this is sent in games against the CPU.</dd>
+      <dt>Reporting and blocking</dt><dd>In online play you can report or block other players. A report stores in Cloud Firestore the room code, the anonymous user IDs of both players, the reason, and a copy of the reported player’s name and profile picture as they were shown, for us to review. Reports are deleted automatically after 30 days. A user whose name or picture breaks the rules may be barred from online play by recording their anonymous user ID. The list of players you block stays on your device and is never sent to us.</dd>
       <dt>Retention and deletion of online play data</dt><dd>A room’s data is deleted when its host closes the room. Data of a room nobody closed becomes due for deletion 24 hours after it was last written and is normally removed by Firestore within the following 24 hours. To ask for deletion while a room still exists, contact us (section 6) with the room code. The anonymous user ID stops being used when you delete the app.</dd>
       <dt>Camera and photos</dt><dd>The camera or the photo picker is used only when you take or choose a profile picture. The chosen picture is shrunk on the device before it is stored. The app accesses no other photos.</dd>
       <dt>Advertising</dt><dd>In games against the CPU, a Google AdMob full-screen ad may be shown between hands (at least three minutes apart). No ads are shown during a hand or in online play. Delivering those ads involves requests to Google, which processes your IP address, device information, and information about ad displays and interactions. The game, your name and your picture are never sent for advertising. Buying Pro removes the ads.</dd>
@@ -432,7 +435,7 @@
     <li><strong>On-device data:</strong> diary entries remain until you delete them in the app or delete the app from your device. New forecasts replace the forecast cache. Offloading an app can retain its data and is different from deleting it.</li>
     <li><strong>Backups:</strong> depending on your settings, app data may be included in operating-system backups to iCloud or a computer. Deleting the app does not remove existing backups. Manage or delete backups through Apple or your backup tools.</li>
     <li><strong>Permissions:</strong> revoke location or calendar access in iOS Settings. Revocation does not itself delete saved diary entries or selected regions. Deleting the app does not delete the original calendar events.</li>
-    <li><strong>Online play data:</strong> deleted when the room closes, or after 24 hours without writes (normally within a further 24 hours). See the app’s entry in section 2.</li>
+    <li><strong>Online play data:</strong> deleted when the room closes, or after 24 hours without writes (normally within a further 24 hours). Reports are deleted after 30 days. See the app’s entry in section 2.</li>
     <li><strong>Data we do not hold:</strong> we cannot remotely read or delete diary entries stored only on your device.</li>
     <li><strong>Provider records:</strong> Apple purchase records and Open-Meteo logs follow the providers’ retention and deletion policies. We cannot directly delete those records.</li>
   </ul>

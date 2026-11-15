@@ -45,7 +45,7 @@
 <nav aria-label="Platform policies"><strong>Android</strong> · <a href="ios.html">iOS・iPadOSアプリ向け / iOS apps</a></nav>
 
 <h1>プライバシーポリシー</h1>
-<p class="updated">最終更新日: 2026年11月14日</p>
+<p class="updated">最終更新日: 2026年11月15日</p>
 
 <p>
   開発者 tiritara（以下「当方」）が公開する<span class="appName">アプリ</span>について、
@@ -142,12 +142,13 @@
   <li><strong>表示される相手：</strong>名前と写真は同じ卓の人に表示され、公開の部屋では部屋の一覧にも表示されます。手牌は本人と、卓を進める端末（ホスト）だけが読めます。</li>
   <li><strong>カメラ・写真：</strong>プロフィール写真を撮る・選ぶときだけ、端末のカメラアプリまたは写真の選択画面を使います。アクセス許可は求めません。選んだ写真は端末内で縮小して保存します。</li>
   <li><strong>端末内に保存する情報：</strong>プロフィールの名前と写真、オンライン対戦の通算ポイントと局数、同意の有無、表示や音の設定。通算ポイントを当方へ送ることはありません。</li>
+  <li><strong>通報とブロック：</strong>ほかのプレイヤーを通報・ブロックできます。通報すると、部屋コード、通報した人と通報された人の匿名のユーザー ID、理由、通報された人の名前とプロフィール写真（表示されていたもののコピー）を Cloud Firestore に保存し、当方が確認します。ルールに反する名前や写真を使った利用者は、匿名のユーザー ID を記録してオンライン対戦の利用を止めることがあります。ブロックした相手の一覧は端末内にだけ保存し、当方へは送りません。</li>
   <li><strong>広告：</strong>CPU 戦の局と局の間にだけ全画面広告を表示することがあります（3分以上の間隔をあけます）。対局中とオンライン対戦中は表示しません。Pro 版を購入すると表示されません。</li>
 </ul>
 <h3 id="mahjong-delete">オンライン対戦の情報の保存期間と削除の方法</h3>
 <ul>
   <li><strong>削除されるもの：</strong>部屋の情報（名前、ユーザー ID、プロフィール写真、対局の進行、接続の記録）。</li>
-  <li><strong>自動の削除：</strong>ホストが部屋を閉じたときに削除します。閉じられなかった部屋の情報は、最後に書き込まれてから 24 時間を過ぎると自動削除の対象となり、通常はその後 24 時間以内に Firestore の仕組みで削除されます。</li>
+  <li><strong>自動の削除：</strong>ホストが部屋を閉じたときに削除します。閉じられなかった部屋の情報は、最後に書き込まれてから 24 時間を過ぎると自動削除の対象となり、通常はその後 24 時間以内に Firestore の仕組みで削除されます。通報の記録は 30 日で自動的に削除されます。</li>
   <li><strong>削除の依頼：</strong>部屋が残っている間に削除を希望される場合は、アプリ名「ロン！俺雀荘」と部屋コードを添えて <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a> へご連絡ください。確認のうえ削除します。</li>
   <li><strong>残るもの：</strong>匿名のユーザー ID は Firebase Authentication に残りますが、名前や写真とは結び付かず、アプリを削除すると使われなくなります。端末内の名前・写真・通算ポイントは、アプリ内で消すかアプリを削除すると消えます。Google Play の購入記録は Google の方針に従います。</li>
 </ul>
@@ -183,7 +184,7 @@
 
 <div class="lang">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 14 November 2026</p>
+  <p class="updated">Last updated: 15 November 2026</p>
 
   <p>
     This policy covers the apps published by the developer tiritara. What is handled differs
@@ -276,12 +277,13 @@
     <li><strong>What is sent:</strong> an anonymous user ID from Firebase Authentication (no email address or other registration), and the room stored in Cloud Firestore (Tokyo region): the room code, whether it is public, the names and user IDs of the people seated, their profile pictures (small JPEGs), the progress of the game (the table and each player&rsquo;s tiles), and whether each player is connected.</li>
     <li><strong>Who sees it:</strong> names and pictures are shown to the others at your table and, for public rooms, in the room list. Your tiles can be read only by you and the device running the table (the host).</li>
     <li><strong>Camera and photos:</strong> the device&rsquo;s camera app or the photo picker is used only when you take or choose a profile picture, without asking for a permission. The picture is shrunk on the device before it is stored.</li>
+    <li><strong>Reporting and blocking:</strong> you can report or block other players. A report stores in Cloud Firestore the room code, the anonymous user IDs of both players, the reason, and a copy of the reported player&rsquo;s name and profile picture as they were shown, for us to review. A user whose name or picture breaks the rules may be barred from online play by recording their anonymous user ID. The list of players you block stays on your device and is never sent to us.</li>
     <li><strong>Advertising:</strong> full-screen ads may be shown only between hands in games against the CPU (at least three minutes apart), never during a hand or in online play, and not at all after buying Pro.</li>
   </ul>
   <h3 id="mahjong-delete-en">Retention and how to request deletion</h3>
   <ul>
     <li><strong>What is deleted:</strong> the room&rsquo;s data (names, user IDs, profile pictures, game progress and connection records).</li>
-    <li><strong>Automatic deletion:</strong> when the host closes the room. Data of a room nobody closed becomes due for deletion 24 hours after it was last written and is normally removed by Firestore within the following 24 hours.</li>
+    <li><strong>Automatic deletion:</strong> when the host closes the room. Data of a room nobody closed becomes due for deletion 24 hours after it was last written and is normally removed by Firestore within the following 24 hours. Reports are deleted automatically after 30 days.</li>
     <li><strong>Requesting deletion:</strong> to ask for deletion while a room still exists, email <a href="mailto:tiritara.dev@gmail.com">tiritara.dev@gmail.com</a> with the app name &ldquo;Ron! Ore Janso&rdquo; and the room code. We will delete it after checking.</li>
     <li><strong>What remains:</strong> the anonymous user ID stays in Firebase Authentication, linked to no name or picture, and stops being used when you delete the app. Your name, picture and running points on the device are removed when you clear them in the app or delete the app. Google Play purchase records follow Google&rsquo;s policies.</li>
   </ul>
